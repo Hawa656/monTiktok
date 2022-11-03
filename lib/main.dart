@@ -363,7 +363,7 @@ class PostContent extends StatelessWidget {
                       CircleAvatar(
                         radius: 25,
                         backgroundImage:
-                            AssetImage('assets/images/disc_icon.jpeg'),
+                            AssetImage('assets/images/disc_icon.png'),
                       ),
                       // Container(
                       //   padding: const EdgeInsets.all(2),
