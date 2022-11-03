@@ -6,7 +6,7 @@ void main() {
   runApp(const MyApp());
 }
 
-//bottom navbar
+//bottom navbardsdddd
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
