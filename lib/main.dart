@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tikodc/Connexion.dart';
 import 'package:video_player/video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -57,7 +58,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Inscription(),
+      body: Connexion(),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tikodc/mot_de_passe_oublier.dart';
 
 void main() {
-  runApp(const Inscription());
+  runApp(Connexion());
 }
 
-class Inscription extends StatelessWidget {
-  const Inscription({super.key});
-
+class Connexion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -92,7 +91,7 @@ void _openPopup(context) {
                     height: 50.0,
                   ),
                   Text(
-                    'Inscription à TikTok',
+                    'Connexion à TikTok',
                     style: TextStyle(fontSize: 25.0),
                   ),
                   SizedBox(
@@ -290,17 +289,36 @@ void _openPopup(context) {
                     height: 50.0,
                   ),
 /********************** Le text en bas ******************* */
-                  Container(
-                    child: const Center(
-                      child: Text(
-                        "En continuant, tu acceptes les Conditions d'utilisation de TikTok et confirmes avoir lu les Politique de confidentialité de TikTok.",
-                        style: TextStyle(
-                          color: Colors.black87,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+                  Expanded(
+                    child: Container(
+                      //color: Colors.orange,
+                      height: 40,
+                      //pour que lorsque l'on clic sur mot de passe oublier que ça t'emmene sur la page concerner
+                      //fonction GestureDetector
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) {
+                                    return MotDePasseOublier();
+                                  },
+                                ));
+                              },
+                              // ),
+                              child: Text(
+                                "Mot de passe oulié?",
+                                style: TextStyle(
+                                    color: Colors.red,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ]),
                     ),
                   ),
+
 /*****************Pour mettre les deux liens TU AS DEJA UN COMPTE   ET CONEXION  ********* */
                   Expanded(
                     child: Align(
@@ -321,9 +339,12 @@ void _openPopup(context) {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Text("Vous avez déjà un compte ?",
+                                          Text("Tu n’as pas de compte ?",
                                               style: TextStyle(fontSize: 15)),
-                                          Text(" Connexion",
+                                          SizedBox(
+                                            width: 10.0,
+                                          ),
+                                          Text("Inscription ",
                                               style: TextStyle(
                                                   color: Colors.red,
                                                   fontSize: 16,
