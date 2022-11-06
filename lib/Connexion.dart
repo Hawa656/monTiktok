@@ -293,6 +293,7 @@ void _openPopup(context) {
                     child: Container(
                       //color: Colors.orange,
                       height: 40,
+                      // ****************lien pour aller sur la page mot de passe oublier*********************
                       //pour que lorsque l'on clic sur mot de passe oublier que ça t'emmene sur la page concerner
                       //fonction GestureDetector
                       child: Row(

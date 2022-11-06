@@ -38,22 +38,27 @@ class _MotDePasseOublierState extends State<MotDePasseOublier> {
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              // mainAxisAlignment: MainAxisAlignment.start,
               //************Insertion de l'image  */
               Image.asset('assets/images/images.jpg'),
-              const Text(
-                  'Entrez votre numéro de téléphone et nous vous enverrons un lien de réinitialisation de mot de passe.'),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 40,
               ),
+              const Text(
+                  'Entrez votre numéro de téléphone et nous \n vous enverrons un lien de réinitialisation de\n mot de passe.'),
+              const SizedBox(
+                height: 20,
+              ),
+
               //*******************test***************** */
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: const EdgeInsets.symmetric(horizontal: 100.0),
                 child: Container(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: Color(0xffF93232),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
