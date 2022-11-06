@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tikodc/Connexion.dart';
-import 'package:tikodc/SeConnecter.dart';
+import 'package:tikodc/main.dart';
 import 'package:tikodc/splash.dart';
 import 'package:video_player/video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'inscription.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-//bottom navbardsdddd
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Accueil extends StatelessWidget {
+  const Accueil({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +29,20 @@ class _BottomNavbarState extends State<BottomNavbar> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  // static const List<Widget> _widgetOptions = <Widget>[
+  //   Text(
+  //     'Index 0: Home',
+  //     style: optionStyle,
+  //   ),
+  //   Text(
+  //     'Index 1: Business',
+  //     style: optionStyle,
+  //   ),
+  //   Text(
+  //     'Index 2: School',
+  //     style: optionStyle,
+  //   ),
+  // ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -46,7 +53,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SeConnecter(),
+      body: MyApp(),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

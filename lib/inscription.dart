@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
-  runApp(const Inscription());
+  runApp(Inscription());
 }
 
 class Inscription extends StatelessWidget {
@@ -264,7 +264,7 @@ void _openPopup(context) {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
-                            children: const <Widget>[
+                            children: <Widget>[
                               Expanded(
                                 flex: 1,
                                 child: FaIcon(
@@ -342,4 +342,5 @@ void _openPopup(context) {
           ),
         );
       });
+  //$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 }
