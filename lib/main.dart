@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tikodc/Connexion.dart';
-import 'package:tikodc/SeConnecter.dart';
-import 'package:tikodc/splash.dart';
 import 'package:video_player/video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'inscription.dart';
+import 'Connexion.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return MaterialApp(
       title: 'tikodc',
-      debugShowCheckedModeBanner: false,
-      home: BottomNavbar(),
+      debugShowCheckedModeBanner: true,
+      home: const BottomNavbar(),
     );
   }
 }
@@ -43,17 +41,26 @@ class _BottomNavbarState extends State<BottomNavbar> {
     });
   }
 
+  final List<Widget> _pages = [
+    HomePage(),
+    HomePage(),
+    HomePage(),
+    HomePage(),
+    Connexion(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SeConnecter(),
+      //on remplace HomePage() par _pages[_selectedIndex]
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Accueil',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Découvrir',
           ),
